@@ -1,22 +1,23 @@
-%define api 5
+%define api %(echo %{version} |cut -d. -f1)
 %define major %api
+%define beta alpha
 
-%define qtminor 4
-%define qtsubminor 1
-
-%define qtversion %{api}.%{qtminor}.%{qtsubminor}
-
-%define qttarballdir qtquickcontrols-opensource-src-%{qtversion}
+%define qttarballdir qtquickcontrols-opensource-src-%{version}%{?beta:-%{beta}}
 %define _qt5_prefix %{_libdir}/qt%{api}
 
 Name:		qt5-qtquickcontrols
-Version:	%{qtversion}
+Version:	5.5.0
+%if "%{beta}" == ""
 Release:	1
+Source0:	http://download.qt.io/official_releases/qt/%(echo %{version} |cut -d. -f1-2)/%{version}/submodules/%{qttarballdir}.tar.xz
+%else
+Release:	0.%{beta}.1
+Source0:	http://download.qt.io/development_releases/qt/%(echo %{version} |cut -d. -f1-2)/%{version}-%{beta}/submodules/%{qttarballdir}.tar.xz
+%endif
 Summary:	Qt GUI toolkit
 Group:		Development/KDE and Qt
 License:	LGPLv2 with exceptions or GPLv3 with exceptions and GFDL
 URL:		http://www.qt-project.org
-Source0:	http://download.qt-project.org/official_releases/qt/%{api}.%{qtminor}/%{version}/submodules/%{qttarballdir}.tar.xz
 BuildRequires:	qt5-qtbase-devel = %{version}
 BuildRequires:	pkgconfig(Qt5Gui) = %{version}
 BuildRequires:	pkgconfig(Qt5Quick) = %{version}
@@ -29,6 +30,7 @@ Qt Quick Controls.
 %{_qt5_prefix}/qml/QtQuick/Controls
 %{_qt5_prefix}/qml/QtQuick/Layouts
 %{_qt5_prefix}/qml/QtQuick/Dialogs
+%{_qt5_prefix}/qml/QtQuick/Extras
 %{_qt5_prefix}/qml/QtQuick/PrivateWidgets
 %{_qt5_exampledir}/quick/dialogs
 
