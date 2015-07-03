@@ -8,10 +8,10 @@
 Name:		qt5-qtquickcontrols
 Version:	5.5.0
 %if "%{beta}" == ""
-Release:	1
+$1
 Source0:	http://download.qt.io/official_releases/qt/%(echo %{version} |cut -d. -f1-2)/%{version}/submodules/%{qttarballdir}.tar.xz
 %else
-Release:	0.%{beta}.1
+$1.%{beta}.1
 Source0:	http://download.qt.io/development_releases/qt/%(echo %{version} |cut -d. -f1-2)/%{version}-%{beta}/submodules/%{qttarballdir}.tar.xz
 %endif
 Summary:	Qt GUI toolkit
