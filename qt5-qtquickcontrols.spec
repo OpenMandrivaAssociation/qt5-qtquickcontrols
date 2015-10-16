@@ -23,6 +23,7 @@ BuildRequires:	qmake5 = %{version}
 BuildRequires:	pkgconfig(Qt5Gui) = %{version}
 BuildRequires:	pkgconfig(Qt5Quick) = %{version}
 BuildRequires:	pkgconfig(Qt5Widgets) = %{version}
+BuildRequires:	pkgconfig(Qt5Sql) = %{version}
 BuildRequires:	qt5-qtquick-private-devel = %{version}
 
 %description
