@@ -5,7 +5,7 @@
 %define _qt5_prefix %{_libdir}/qt%{api}
 
 Name:		qt5-qtquickcontrols
-Version:	5.6.1
+Version:	5.7.0
 %if "%{beta}" != ""
 Release:	1.%{beta}.1
 %define qttarballdir qtquickcontrols-opensource-src-%{version}-%{beta}
@@ -32,7 +32,6 @@ Qt Quick Controls.
 
 %files
 %{_qt5_prefix}/qml/QtQuick/Controls
-%{_qt5_prefix}/qml/QtQuick/Layouts
 %{_qt5_prefix}/qml/QtQuick/Dialogs
 %{_qt5_prefix}/qml/QtQuick/Extras
 %{_qt5_prefix}/qml/QtQuick/PrivateWidgets
