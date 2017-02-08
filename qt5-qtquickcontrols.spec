@@ -1,13 +1,13 @@
 %define api %(echo %{version} |cut -d. -f1)
 %define major %api
-%define beta %nil
+%define beta %{nil}
 
 %define _qt5_prefix %{_libdir}/qt%{api}
 
 Name:		qt5-qtquickcontrols
-Version:	5.6.2
+Version:	5.8.0
 %if "%{beta}" != ""
-Release:	1.%{beta}.1
+Release:	0.%{beta}.1
 %define qttarballdir qtquickcontrols-opensource-src-%{version}-%{beta}
 Source0:	http://download.qt.io/development_releases/qt/%(echo %{version}|cut -d. -f1-2)/%{version}-%{beta}/submodules/%{qttarballdir}.tar.xz
 %else
@@ -32,7 +32,6 @@ Qt Quick Controls.
 
 %files
 %{_qt5_prefix}/qml/QtQuick/Controls
-%{_qt5_prefix}/qml/QtQuick/Layouts
 %{_qt5_prefix}/qml/QtQuick/Dialogs
 %{_qt5_prefix}/qml/QtQuick/Extras
 %{_qt5_prefix}/qml/QtQuick/PrivateWidgets
