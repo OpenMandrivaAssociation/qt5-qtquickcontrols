@@ -5,7 +5,7 @@
 %define _qt5_prefix %{_libdir}/qt%{api}
 
 Name:		qt5-qtquickcontrols
-Version:	5.9.0
+Version:	5.9.1
 %if "%{beta}" != ""
 Release:	0.%{beta}.1
 %define qttarballdir qtquickcontrols-opensource-src-%{version}-%{beta}
