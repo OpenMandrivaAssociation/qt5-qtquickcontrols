@@ -26,6 +26,8 @@ BuildRequires:	pkgconfig(Qt5Quick) = %{version}
 BuildRequires:	pkgconfig(Qt5Widgets) = %{version}
 BuildRequires:	pkgconfig(Qt5Sql) = %{version}
 BuildRequires:	qt5-qtquick-private-devel = %{version}
+# For the Provides: generator
+BuildRequires:	cmake >= 3.11.0-1
 
 %description
 Qt Quick Controls.
