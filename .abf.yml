@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   qtquickcontrols-opensource-src-5.9.2.tar.xz: 19450c50fcdb1d32ee7fa02f0df94ee24bf1e1ec
+sources:
+  qtquickcontrols-opensource-src-5.9.6.tar.xz: e30aa06c34bb1b288bffcd193e8606a49d679934
