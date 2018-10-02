@@ -44,7 +44,7 @@ Summary:	Examples for the QtQuick Controls library
 Group:		Development/KDE and Qt
 
 %description examples
-Examples for the QtQuick Controls library
+Examples for the QtQuick Controls library.
 
 %files examples
 %{_qt5_prefix}/examples/quickcontrols
@@ -52,13 +52,13 @@ Examples for the QtQuick Controls library
 #------------------------------------------------------------------------------
 
 %prep
-%setup -q -n %qttarballdir
+%autosetup -n %qttarballdir -p1
 
 %build
 %qmake_qt5
-%make
+%make_build
 
 #------------------------------------------------------------------------------
 
 %install
-%makeinstall_std INSTALL_ROOT=%{buildroot}
+%make_install INSTALL_ROOT=%{buildroot}
