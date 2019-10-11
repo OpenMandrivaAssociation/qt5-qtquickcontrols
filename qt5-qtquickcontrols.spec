@@ -26,6 +26,7 @@ BuildRequires:	pkgconfig(Qt5Quick) = %{version}
 BuildRequires:	pkgconfig(Qt5Widgets) = %{version}
 BuildRequires:	pkgconfig(Qt5Sql) = %{version}
 BuildRequires:	qt5-qtquick-private-devel = %{version}
+BuildRequires:	qt5-qtqmlmodels-private-devel
 # For the Provides: generator
 BuildRequires:	cmake >= 3.11.0-1
 
