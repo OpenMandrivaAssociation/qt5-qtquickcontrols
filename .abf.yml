@@ -1,7 +1,2 @@
 sources:
-  qtquickcontrols-everywhere-src-5.13.0-rc3.tar.xz: c59cb5d2d57ee1bd636d9b6e7bfae65d123739db
-  qtquickcontrols-everywhere-src-5.14.0-beta1.tar.xz: d3a310bb79fc27083db658ece28b4f9feff23342
-  qtquickcontrols-everywhere-src-5.14.0-beta2.tar.xz: e3a553813f3cbf1eab759b89b96006a16161cc31
-  qtquickcontrols-everywhere-src-5.14.0-beta3.tar.xz: 2ffc09be6f965c3420c7df7aa40c3f21bffa9bfb
-  qtquickcontrols-everywhere-src-5.14.0-rc.tar.xz: 417734bb59826454024c96709a7df9a0c321bd9c
   qtquickcontrols-everywhere-src-5.14.0.tar.xz: 0cfca95843d0684c90cf8f624d3dd9ef2ced8f0c
