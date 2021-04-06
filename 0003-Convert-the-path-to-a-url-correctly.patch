@@ -1,0 +1,31 @@
+From cf3f6d7fec824cdf01f9b329ab3b92b1c0e0a420 Mon Sep 17 00:00:00 2001
+From: Andy Shaw <andy.shaw@qt.io>
+Date: Fri, 6 Nov 2020 12:12:56 +0100
+Subject: [PATCH 3/3] Convert the path to a url correctly
+
+Just adding file:// is not enough if it is a Windows file path as it
+will cause it to lose the drive information as a result. So use the
+function available to get this correctly.
+
+Change-Id: I9927a8a67b1743c24cd317bea9ebf5e174b77604
+Reviewed-by: Mitch Curtis <mitch.curtis@qt.io>
+---
+ src/dialogs/DefaultFileDialog.qml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/dialogs/DefaultFileDialog.qml b/src/dialogs/DefaultFileDialog.qml
+index 077b5acd..ea2fa42d 100644
+--- a/src/dialogs/DefaultFileDialog.qml
++++ b/src/dialogs/DefaultFileDialog.qml
+@@ -115,7 +115,7 @@ AbstractFileDialog {
+ 
+     function dirDown(path) {
+         view.selection.clear()
+-        root.folder = "file://" + path
++        root.folder = root.pathToUrl(path)
+     }
+     function dirUp() {
+         view.selection.clear()
+-- 
+2.31.1
+
